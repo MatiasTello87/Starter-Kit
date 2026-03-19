@@ -1,0 +1,95 @@
+$alt-header: 56px;
+//utilizo una variable para usar como referencia para el main
+
+@mixin Header(){
+    width: 100%;
+    height: $alt-header;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1em;
+    background-color: white;
+    border-bottom: .1px inset $negro;
+    .logo{
+        cursor: pointer;
+        text-decoration: none;
+        color: $negro ;
+        
+    }
+    .abrir{
+        opacity: 0;
+        visibility: hidden;
+        @include mobil-smaller(){
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+   
+    .nav{
+        display: flex;
+        align-items: end;
+        @include mobil-smaller(){
+            flex-direction: column;
+
+            opacity: 0;
+            visibility: hidden;
+
+            height: 100vh;
+            align-items: end;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            transform: translateX(100%); 
+            // transition: transform 0.4s ease-in-out;
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+            box-shadow: 0 0 0 100vmax rgb(0,0,0, .5);
+            padding: 1rem 1rem 0 4rem;;
+            background-color: black;
+             &.visible {
+                transform: translateX(0);
+            }
+        }
+        .cerrar{
+            opacity: 0;
+            visibility: hidden;
+            @include mobil-smaller(){
+                opacity: 1;
+                visibility: visible;
+            }
+            }
+        .nav-list{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+            font-size: 1.3rem;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            @include mobil-smaller(){
+                flex-direction: column;
+                align-items: end;
+                padding: 3em 0;
+                // transform: translateY(15%);
+                gap: 1rem;
+                a{
+                    text-decoration: none;
+                    color: rgb(35, 150, 135);
+                    img{
+                        margin-top: 4em;
+                    }
+                }
+            }
+        }
+    }
+     .visible{
+        opacity: 1;
+        visibility: visible;
+
+    }
+ 
+}

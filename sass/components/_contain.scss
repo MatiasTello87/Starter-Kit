@@ -1,0 +1,18 @@
+@mixin Contain(){
+    max-width: 100%;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    header{
+      @include Header();
+    }
+    main{
+      @include Main();
+    }
+    footer{
+      @include Footer();
+    }
+  }
+
+

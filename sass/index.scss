@@ -1,0 +1,30 @@
+// Imports
+
+// Mediaqueries
+@import 'mixins/mediqueries.scss';
+//Container Gral
+@import 'components/contain';
+// Header
+@import 'components/header';
+//Main
+@import 'components/main';
+//Footer
+@import 'components/footer';
+
+//Recursos
+@import 'recursos/colors';
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+  scroll-behavior: smooth; //efecto de suavidad al moverse el scroll
+}
+body{
+  .container_gral{
+    @include Contain();
+  }
+}

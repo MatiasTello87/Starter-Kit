@@ -22,6 +22,8 @@
 }
 html{
   scroll-behavior: smooth; //efecto de suavidad al moverse el scroll
+  background-color: $fondo;
+  color: $beige;
 }
 body{
   .container_gral{

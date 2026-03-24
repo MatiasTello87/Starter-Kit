@@ -1,5 +1,5 @@
 @mixin Footer(){
-    background-color: rgb(128, 240, 143);
     padding:2em;
     width: 100%;
+    box-shadow: 0px 0px 25px 5px $shadow;
 }

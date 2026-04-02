@@ -1,5 +1,6 @@
 @mixin Footer(){
     padding:2em;
     width: 100%;
+    background-image: radial-gradient(#1f1f1f, $fondo);
     box-shadow: 0px 0px 25px 5px $shadow;
 }

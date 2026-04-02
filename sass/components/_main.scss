@@ -5,13 +5,32 @@
     align-items: center;
     gap: 2rem;
     padding:5rem 0;
+    margin-top: $alt-header;
     @include mobil-smaller(){
-        max-width: 100%;
+        max-width: 90%;
     }
 
     section{
-        border: 1px solid black;
+        border: 1px solid $black;
         scroll-margin-top: 130px;
-        // color: aqua;
+        padding: 2rem 1rem
+    }
+    .home{
+        @include Home();
+    }
+    .bio{
+        @include Bio();
+    }
+    .servicio{
+        @include Servicio();
+    }
+    .container_bento{
+        @include contain-bento();
+    }
+    .metodo{
+        @include Metodo();
+    }
+    .contacto{
+        @include Contacto();
     }
 }

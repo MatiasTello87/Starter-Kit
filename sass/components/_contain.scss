@@ -4,13 +4,13 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     justify-items: center;
-    header{
+    .header{
       @include Header();
     }
     main{
       @include Main();
     }
-    footer{
+    .footer{
       @include Footer();
     }
   }
